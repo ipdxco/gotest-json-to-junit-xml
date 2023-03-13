@@ -1,0 +1,16 @@
+name: Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
+        with:
+          input: 'test/data/go.json'
+          output: 'test/actual/junit.xml'
+      - run: diff test/actual/junit.xml test/expected/junit.xml

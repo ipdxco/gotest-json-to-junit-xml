@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+   <testsuite package="github.com/package/example"
+               name="TestOne"
+               tests="1"
+               failures="0"
+               skipped="0"
+               time="0"
+               timestamp="2023-03-10T22:28:20.667508714Z">
+      <testcase name="TestOne" time="0" timestamp="2023-03-10T22:28:20.667508714Z">
+         <system-out>=== RUN   TestOne
+--- PASS: TestOne (0.00s)
+</system-out>
+      </testcase>
+   </testsuite>
+   <testsuite package="github.com/package/example"
+               name="TestTwo"
+               tests="6"
+               failures="0"
+               skipped="0"
+               time="0"
+               timestamp="2023-03-10T22:28:20.668514306Z">
+      <testcase name="TestTwo" time="0" timestamp="2023-03-10T22:28:20.668514306Z">
+         <system-out>=== RUN   TestTwo
+--- PASS: TestTwo (0.00s)
+</system-out>
+      </testcase>
+      <testcase name="TestTwo/subtest_one"
+                 time="0"
+                 timestamp="2023-03-10T22:28:20.668553806Z">
+         <system-out>=== RUN   TestTwo/subtest_one
+    --- PASS: TestTwo/subtest_one (0.00s)
+</system-out>
+      </testcase>
+      <testcase name="TestTwo/subtest_two"
+                 time="0"
+                 timestamp="2023-03-10T22:28:20.668619505Z">
+         <system-out>=== RUN   TestTwo/subtest_two
+    --- PASS: TestTwo/subtest_two (0.00s)
+</system-out>
+      </testcase>
+      <testcase name="TestTwo/subtest_three"
+                 time="0"
+                 timestamp="2023-03-10T22:28:20.668667305Z">
+         <system-out>=== RUN   TestTwo/subtest_three
+    --- PASS: TestTwo/subtest_three (0.00s)
+</system-out>
+      </testcase>
+      <testcase name="TestTwo/subtest_four"
+                 time="0"
+                 timestamp="2023-03-10T22:28:20.668783304Z">
+         <system-out>=== RUN   TestTwo/subtest_four
+    --- PASS: TestTwo/subtest_four (0.00s)
+</system-out>
+      </testcase>
+      <testcase name="TestTwo/subtest_five"
+                 time="0"
+                 timestamp="2023-03-10T22:28:20.669167701Z">
+         <system-out>=== RUN   TestTwo/subtest_five
+    --- PASS: TestTwo/subtest_five (0.00s)
+</system-out>
+      </testcase>
+   </testsuite>
+</testsuites>

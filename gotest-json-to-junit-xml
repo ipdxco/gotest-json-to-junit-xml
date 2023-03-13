@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker run --rm -v "$(pwd):/workspace" -w "/workspace" --entrypoint "/bin/bash" ghcr.io/pl-strflt/saxon:v1 -c \
+  "java -jar /opt/SaxonHE11-5J/saxon-he-11.5.jar -json:<(jq -s '.' '$1') -xsl:/etc/gotest.xsl -o:$2"

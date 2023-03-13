@@ -1,0 +1,25 @@
+# action.yml
+name: 'GoTest JSON to JUnit XML'
+description: 'Convert GoTest JSON to JUnit XML'
+branding:
+  icon: 'award'
+  color: 'green'
+inputs:
+  input:
+    description: 'Input JSON file'
+    required: true
+  output:
+    description: 'Output XML file'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - uses: pl-strflt/docker-container-action@v1
+      env:
+        INPUT_INPUT: ${{ inputs.input }}
+        INPUT_OUTPUT: ${{ inputs.output }}
+      with:
+        repository: pl-strflt/saxon
+        ref: v1
+        opts: --entrypoint=/bin/bash
+        args: -c "java -jar /opt/SaxonHE11-5J/saxon-he-11.5.jar -json:<(jq -s '.' '$INPUT_INPUT') -xsl:/etc/gotest.xsl -o:$INPUT_OUTPUT"

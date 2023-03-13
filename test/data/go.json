@@ -1,0 +1,28 @@
+{"Time":"2023-03-10T22:28:20.667508714Z","Action":"run","Package":"github.com/package/example","Test":"TestOne"}
+{"Time":"2023-03-10T22:28:20.667511714Z","Action":"output","Package":"github.com/package/example","Test":"TestOne","Output":"=== RUN   TestOne\n"}
+{"Time":"2023-03-10T22:28:20.668464407Z","Action":"output","Package":"github.com/package/example","Test":"TestOne","Output":"--- PASS: TestOne (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.668509406Z","Action":"pass","Package":"github.com/package/example","Test":"TestOne","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.668514306Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo"}
+{"Time":"2023-03-10T22:28:20.668517506Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo","Output":"=== RUN   TestTwo\n"}
+{"Time":"2023-03-10T22:28:20.668553806Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo/subtest_one"}
+{"Time":"2023-03-10T22:28:20.668565906Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_one","Output":"=== RUN   TestTwo/subtest_one\n"}
+{"Time":"2023-03-10T22:28:20.668619505Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo/subtest_two"}
+{"Time":"2023-03-10T22:28:20.668623905Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_two","Output":"=== RUN   TestTwo/subtest_two\n"}
+{"Time":"2023-03-10T22:28:20.668667305Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo/subtest_three"}
+{"Time":"2023-03-10T22:28:20.668671705Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_three","Output":"=== RUN   TestTwo/subtest_three\n"}
+{"Time":"2023-03-10T22:28:20.668783304Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo/subtest_four"}
+{"Time":"2023-03-10T22:28:20.668790704Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_four","Output":"=== RUN   TestTwo/subtest_four\n"}
+{"Time":"2023-03-10T22:28:20.669167701Z","Action":"run","Package":"github.com/package/example","Test":"TestTwo/subtest_five"}
+{"Time":"2023-03-10T22:28:20.669172701Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_five","Output":"=== RUN   TestTwo/subtest_five\n"}
+{"Time":"2023-03-10T22:28:20.669230401Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo","Output":"--- PASS: TestTwo (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.669236801Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_one","Output":"    --- PASS: TestTwo/subtest_one (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.669240801Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo/subtest_one","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.669244501Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_two","Output":"    --- PASS: TestTwo/subtest_two (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.669248201Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo/subtest_two","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.669251401Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_three","Output":"    --- PASS: TestTwo/subtest_three (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.6692625Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo/subtest_three","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.6692659Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_four","Output":"    --- PASS: TestTwo/subtest_four (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.6692705Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo/subtest_four","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.6692746Z","Action":"output","Package":"github.com/package/example","Test":"TestTwo/subtest_five","Output":"    --- PASS: TestTwo/subtest_five (0.00s)\n"}
+{"Time":"2023-03-10T22:28:20.6693073Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo/subtest_five","Elapsed":0}
+{"Time":"2023-03-10T22:28:20.6693108Z","Action":"pass","Package":"github.com/package/example","Test":"TestTwo","Elapsed":0}
