@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.1] - 2023-03-14
+### Added
+- support for providing multiple files as input
+
+### Changed
+- started using the saxon action without entrypoint overwrite
+
 ## [1.0.0] - 2021-03-13
 ### Added
 - v1 of the GoTest JSON to JUnit XML action
