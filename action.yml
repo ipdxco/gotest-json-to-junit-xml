@@ -6,7 +6,7 @@ branding:
   color: 'green'
 inputs:
   input:
-    description: 'Input JSON file'
+    description: 'Input JSON file(s)'
     required: true
   output:
     description: 'Output XML file'
@@ -14,12 +14,23 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - uses: pl-strflt/docker-container-action@v1
+    - id: json
       env:
+        INPUT: ${{ inputs.input }}
+      run: |
+        json="$(mktemp -p .)"
+        jq -ns 'inputs' $(echo "$INPUT") > "$json"
+        echo "json=$json" >> $GITHUB_OUTPUT
+      shell: bash
+    - uses: pl-strflt/saxon@v1
+      env:
+        JSON: ${{ steps.json.outputs.json }}
         INPUT_INPUT: ${{ inputs.input }}
         INPUT_OUTPUT: ${{ inputs.output }}
       with:
-        repository: pl-strflt/saxon
-        ref: v1
-        opts: --entrypoint=/bin/bash
-        args: -c "java -jar /opt/SaxonHE11-5J/saxon-he-11.5.jar -json:<(jq -s '.' '$INPUT_INPUT') -xsl:/etc/gotest.xsl -o:$INPUT_OUTPUT"
+        args: -json:$JSON -xsl:/etc/gotest.xsl -o:$INPUT_OUTPUT
+    - if: (success() || failure()) && steps.json.outputs.json != ''
+      env:
+        JSON: ${{ steps.json.outputs.json }}
+      run: rm "$JSON"
+      shell: bash
