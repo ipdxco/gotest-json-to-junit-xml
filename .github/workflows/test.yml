@@ -9,7 +9,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os:
+          - ubuntu-latest
+          # NOTE: the official macOS runner does not support Docker
+          # - macos-latest
+          # WARN: HEAD request for the manifest fails on windows-latest
+          # WARN: docker build command fails to find Dockerfile
+          # - windows-latest
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
