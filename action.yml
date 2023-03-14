@@ -18,7 +18,7 @@ runs:
       env:
         INPUT: ${{ inputs.input }}
       run: |
-        json="$(mktemp -p .)"
+        json="tmp.$RANDOM.json"
         jq -ns 'inputs' $(echo "$INPUT") > "$json"
         echo "json=$json" >> $GITHUB_OUTPUT
       shell: bash
