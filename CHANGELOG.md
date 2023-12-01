@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.2] - 2023-12-01
+### Changed
+- use saxon image from ipdxco
+
 ## [1.0.1] - 2023-03-14
 ### Added
 - support for providing multiple files as input

@@ -4,4 +4,4 @@ json="$(mktemp -p .)"
 jq -ns 'inputs' "$1" > "$json"
 trap "rm $json" EXIT
 
-docker run --rm -v "$(pwd):/workspace" -w "/workspace" ghcr.io/pl-strflt/saxon:v1 -json:"$json" -xsl:/etc/gotest.xsl -o:"$2"
+docker run --rm -v "$(pwd):/workspace" -w "/workspace" ghcr.io/ipdxco/saxon:v1 -json:"$json" -xsl:/etc/gotest.xsl -o:"$2"
